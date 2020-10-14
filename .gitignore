@@ -8,3 +8,6 @@ _site
 
 # yui-compressor
 *.jar
+
+# Local stuff
+.vscode/
