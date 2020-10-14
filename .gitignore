@@ -1,0 +1,10 @@
+
+# python compiled files
+*.pyc
+__pycache__
+
+# jekyll debug
+_site
+
+# yui-compressor
+*.jar
