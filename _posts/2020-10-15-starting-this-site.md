@@ -58,12 +58,17 @@ Anyway, moving on.
 
 This part's relatively straightforward. Most guides out there (including [GitHub's][gh_guide_github_pages]) will tell you to name your repo `username.github.io`, replacing `username` with your username. This *works*, but is not actually required.
 
-In fact, the naming convention of `username.github.io` just tells GitHub to turn on the GitHub Pages settings automatically when the repo is first created:
+In fact, the naming convention of `username.github.io` just tells GitHub to turn on GitHub Pages options automatically when the repo is first created.
+
+Whether you name your repo `username.github.io` or `myawesomesite.example.com.bork`, the GH Pages settings can be found in the repository settings, by scrolling down until you see this section:
 
 ![My GitHub Pages Settings](/assets/img/my-gh-pages-settings.png)
 _My GitHub Pages settings for this site, as of the time of this post. Don't worry, HTTPS is still enforced by Cloudflare!_
 
-These settings can really be enabled in any repo of your choosing. The only difference will be the default URL, which would be `http://username.github.io/repo_name` (a `username.github.io` repo, by contrast, would be served at `http://username.github.io`).
+These settings can be enabled in any repo of your choosing, even an existing one. The only difference will be the URL that serves the pages by default:
+
+- A repo named `username.github.io` will be served from `http://username.github.io`.
+- Any other repo will be served from `http://username.github.io/reponame`, where `reponame` is... well, the name of the repo.
 
 ### What's that "Theme Chooser" setting?
 
