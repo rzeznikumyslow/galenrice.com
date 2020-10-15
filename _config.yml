@@ -16,6 +16,9 @@ description: >- # used by seo meta and the atom feed
   who may or may not know what [he/him] is talking about.
 
 url: "https://galenrice.com"
+# TODO fix this for SEO concerns:
+# https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/advanced-usage.md#author-information
+# (may require changing code across the site, which uses this incorrectly)
 author: Galen Rice
 
 avatar: /assets/img/galenrice.png
@@ -24,7 +27,8 @@ github:
   username: GriceTurrble # change to your github username
 
 twitter:
-  username: JustTurrble # change to your twitter username
+  username: JustTurrble
+  card: summary
 
 social:
   name: Galen Rice # it will shows as the copyright owner in Footer
@@ -37,7 +41,7 @@ social:
     - https://www.linkedin.com/in/thegman
 
 # change to your verification string
-# google_site_verification: google_meta_tag_verification
+google_site_verification: 1PmOYNIfP8uB4OqtD6p8b6If0nI6dq8sgyfQdgENjeA
 
 #--------------------------
 
