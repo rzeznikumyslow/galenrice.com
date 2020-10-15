@@ -2,18 +2,18 @@
 
 Grab the post timestamp using the following:
 
-In bash:
+**In bash:**
 
 ```bash
-date +"%Y-%m-%d %H:%M %z"
+date +"%Y-%m-%d %H:%M:%S %z"
 ```
 
-In Powershell:
+**In Powershell:**
 
 ```powershell
-Get-Date -UFormat '%Y-%m-%d %R %Z00'
+Get-Date -UFormat '%Y-%m-%d %R:%S %Z00'
 ```
 
-Both will output in the format of, for example, `2020-10-14 20:30 -0400` (Oct 14, 2020, 8:30 pm US/Eastern with correct offset for DST). This is the proper format for a post date.
+Both will output in the format of, for example, `2020-10-14 20:30:00 -0400` (Oct 14, 2020, 8:30 pm US/Eastern with correct offset for DST). This is the proper format for a post date.
 
 Obviously, adjust the post date as needed. No need to be precise to the minute here, depending on needs.
