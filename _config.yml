@@ -117,6 +117,7 @@ defaults:
       # Display TOC column in posts.
       toc: true
       location: Post
+      permalink: /posts/:year/:month/:day/:title/
       breadcrumb:
         - label: Posts
           url: /
