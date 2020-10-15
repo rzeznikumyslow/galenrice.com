@@ -55,6 +55,7 @@
   {% assign maxHeader = include.h_max | default: 6 %}
   {% assign beforeHeading = include.beforeHeading %}
   {% assign nodes = include.html | split: '<h' %}
+  {% assign bootstrapToc = include.bootstrapToc %}
 
   {% capture edited_headings %}{% endcapture %}
 
@@ -90,6 +91,14 @@
 
     {% capture _hAttrToStrip %}{{ _workspace[0] | split: '>' | first }}>{% endcapture %}
     {% assign header = _workspace[0] | replace: _hAttrToStrip, '' %}
+
+    {% comment %}
+      >Grice: Inject a data-toc-text attr into the header here,
+      so Bootstrap TOC doesn't include the anchor text in its output.
+    {% endcomment %}
+    {% if bootstrapToc %}
+      {% capture _hAttrToStrip %}{{ _hAttrToStrip | split: '>' | first }} data-toc-text="{{ header }}">{% endcapture %}
+    {% endif %}
 
     <!-- Build the anchor to inject for our heading -->
     {% capture anchor %}{% endcapture %}
