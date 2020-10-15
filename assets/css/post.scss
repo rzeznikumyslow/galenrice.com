@@ -349,3 +349,10 @@ $prompt-newer: "{{ site.data.label.post.button.next }}";
     margin-right: -.5rem;
   }
 }
+
+/* >Grice: anchor headings */
+.post-content a.anchor-heading {
+    opacity: 0.8;
+    border-bottom: 0;
+    text-decoration: none;
+}
