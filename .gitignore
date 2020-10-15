@@ -4,6 +4,7 @@
 __pycache__
 
 # jekyll debug
+.jekyll-cache/
 _site
 
 # yui-compressor
