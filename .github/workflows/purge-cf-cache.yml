@@ -1,3 +1,12 @@
+# Added by GriceTurrble, based on the example in
+# https://github.com/jakejarvis/cloudflare-purge-action
+
+# Purges the Cloudflare CDN cache for this site, using a dedicated action.
+# Triggers on successful deployment build automatically, no intervention required.
+
+# Repo Secrets are used to inject the ZoneID and Cloudflare API Token.
+# (token is restricted to only purging caches, and only on this site's domain)
+
 name: 'Purge Cloudflare Cache'
 on:
   workflow_run:
