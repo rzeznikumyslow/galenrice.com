@@ -3,7 +3,7 @@ title: Welcome!
 author: Galen Rice
 date: 2020-10-14 16:00:00 -0400
 categories: [Blogging, Hello]
-tags: [typography]
+tags: [meta]
 sitemap: false
 ---
 
