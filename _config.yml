@@ -72,6 +72,12 @@ disqus:
   # https://help.disqus.com/en/articles/1717111-what-s-a-shortname
   shortname: ""
 
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-redirect-from
+  - jekyll-seo-tag
+
 # Prefer color scheme setting, available values:
 #
 #     dual   - Follow the system prefer color by default, and a toggle will display
