@@ -1,5 +1,10 @@
 name: 'Purge Cloudflare Cache'
-on: page_build
+on:
+  workflow_run:
+    workflows: ["Automatic build"]
+    branches: [production]
+    types:
+      - completed
 
 jobs:
   purge:
