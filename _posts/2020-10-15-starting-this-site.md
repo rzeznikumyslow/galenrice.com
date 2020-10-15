@@ -80,7 +80,7 @@ You can use built-in themes for any Jekyll site (or even remote themes) just by 
 
 The "Theme Chooser" option (shown above) gives you easy access to those built-in themes from the browser, updating your config to match your selection. You can change the chosen theme just by changing the config, either through the "Chooser" or changing `_config.yml`.
 
-For this site, with all that I wanted to besides a simple static page, I found it made more sense to bring the full theme into the repo. That's what the Chirpy folks recommended, anyway, but I also wanted the ability to alter the site internals without always referring back to a remote theme or trying to hammer in some hacky overrides.
+For this site, with all that I wanted to do besides a simple static page, I found it made more sense to bring the full theme into the repo. That's what the Chirpy folks recommended, anyway, but I also wanted the ability to alter the site internals without always referring back to a remote theme or trying to hammer in some hacky overrides.
 
 If you just want a simple site with minimal coding, by all means, use the Theme Chooser or go with Jekyll's `minima` theme or some remote theme or whatever you like.
 
