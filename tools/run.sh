@@ -63,9 +63,18 @@ _init() {
     rm -rf "$CONTAINER"
   fi
 
+  # >Grice: remove a pre-built _site directory first
+  if [[ -d _site ]]; then
+    rm -rf _site
+  fi
+
   mkdir "$CONTAINER"
   cp -r ./* "$CONTAINER"
   cp -r ./.git "$CONTAINER"
+  # >Grice, touch and adjust a Gemfile.lock
+  # echo "Touching new Gemfile.lock in container"
+  # touch $CONTAINER/Gemfile.lock
+  chmod a+w $CONTAINER
 
   if $docker; then
     local _image_user=$(stat -c "%U" "$JEKYLL_DOCKER_HOME"/.)
