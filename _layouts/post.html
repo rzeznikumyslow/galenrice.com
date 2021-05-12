@@ -85,7 +85,7 @@ layout: default
         {% comment %}
           >Grice: Include `headerAttrs` with `data-toc-text` to inject the heading, so that Bootstrap TOC doesn't add the anchor text to the output.
         {% endcomment %}
-        {% include anchor_headings.html html=content anchorBody="#" anchorClass="anchor-heading" headerAttrs='data-toc-text="%heading%" data-example="Hello people!"' %}
+        {% include anchor_headings.html html=content anchorBody="#" anchorClass="anchor-heading" headerAttrs='data-toc-text="%heading%"' %}
       </div>
 
       <div class="post-tail-wrapper text-muted">

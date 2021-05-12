@@ -36,6 +36,17 @@ docker run --rm -it --volume="$(pwd):/srv/jekyll" -p 4000:4000 jekyll/jekyll bas
 
 Builds take a while to complete, and auto-refresh may not work properly on a Windows machine, but it works.
 
+### In CodeSpace
+
+In a GitHub codespace, development is much simpler:
+
+```bash
+bundle install
+bundle exec jekyll s
+```
+
+Now there is a running server, which you should find running at `http://127.0.0.1:4000`.
+
 ## Contributing
 
 For suggestions regarding content on the site, feel free to comment using the site tools or contact me directly.
