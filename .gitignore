@@ -1,0 +1,24 @@
+# hidden files
+.*
+!.git*
+!.editorconfig
+!.nojekyll
+!.travis.yml
+
+# bundler cache
+_site
+vendor
+
+# rubygem
+*.gem
+
+# npm dependencies
+node_modules
+package-lock.json
+
+# Local stuff
+.vscode/
+
+# I don't care about this being a fast bundler.
+# Just install as needed from the Gemfile, thank you.
+[Gg]emfile.lock
