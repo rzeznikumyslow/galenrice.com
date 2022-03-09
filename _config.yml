@@ -18,11 +18,11 @@ timezone: US/Eastern
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: GriceBlog                          # the main title
+title: GriceBlog
 
-tagline: If it ain't broke, it's legacy   # it will display as the sub-title
+tagline: If it ain't broke, it's legacy
 
-description: >-                        # used by seo meta and the atom feed
+description: >-
   A development-focused blog by Galen Rice, software engineer in NJ, USA,
   who may or may not know what [he/him] is talking about.
 
@@ -30,24 +30,21 @@ description: >-                        # used by seo meta and the atom feed
 url: 'https://galenrice.com'
 
 github:
-  username: JustTurrble             # change to your github username
+  username: GriceTurrble
 
 twitter:
-  username: twitter_username            # change to your twitter username
+  username: JustTurrble
 
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
   name: Galen Rice
-  email: griceturrble@protonmail.com            # change to your email address
+  email: info@galenrice.com
   links:
     # The first element serves as the copyright owner's link
     - https://github.com/griceturrble
     - https://twitter.com/JustTurrble
     - https://www.linkedin.com/in/thegman
-    # Uncomment below to add more social links
-    # - https://www.facebook.com/username
-    # - https://www.linkedin.com/in/username
 
 google_site_verification: 1PmOYNIfP8uB4OqtD6p8b6If0nI6dq8sgyfQdgENjeA
 
@@ -55,7 +52,7 @@ google_site_verification: 1PmOYNIfP8uB4OqtD6p8b6If0nI6dq8sgyfQdgENjeA
 
 
 google_analytics:
-  id: ''              # fill in your Google Analytics ID
+  id: ''
   # Google Analytics pageviews report settings
   pv:
     proxy_endpoint:   # fill in the Google Analytics superProxy endpoint of Google App Engine
