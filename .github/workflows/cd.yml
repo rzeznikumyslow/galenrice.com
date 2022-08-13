@@ -1,7 +1,7 @@
 # Workflow syntax: https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions
 # Triggers: https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows
 
-name: "Automatic build"
+name: "Automatic build and deploy"
 on:
   workflow_dispatch:
   push:
@@ -40,23 +40,11 @@ jobs:
         with:
           bundler-cache: true
 
-      # - name: setup git config
-      #   run: |
-      #     # setup git
-      #     git config user.name "GitHub Actions Bot"
-      #     git config user.email "<>"
-
-      # - name: Deploy
-      #   run: bash tools/deploy.sh
-
       - name: Build site
         run: bundle exec jekyll build --config "${CONFIG_YML}" --destination "${SITE_DIR}"
 
       - name: Test site
         run: bundle exec htmlproofer --disable-external --allow_hash_href "${SITE_DIR}"
-
-      # - name: Generate artifact
-      #   run: tar -cfzv github-pages.tar.gz
 
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v1
@@ -71,3 +59,18 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
+
+  purge:
+    needs:
+      - deploy
+    runs-on: ubuntu-latest
+    steps:
+      # Put steps here to build your site, deploy it to a service, etc.
+
+      - name: Purge Cloudflare Cache
+        uses: jakejarvis/cloudflare-purge-action@v0.3.0
+
+        env:
+          # Zone is required by both authentication methods
+          CLOUDFLARE_ZONE: ${{ secrets.CLOUDFLARE_ZONE_ID }}
+          CLOUDFLARE_TOKEN: ${{ secrets.CLOUDFLARE_PURGE_CACHE_TOKEN }}
