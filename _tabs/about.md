@@ -49,8 +49,7 @@ who thinks they know enough to write about it. All are welcome here.
 
 ## Questions?
 
-Send me an email or a Tweet or whatever the kids are doing these days
-(_he said, being one of those "kids" himself, yet still somehow being behind the times_).
+Send me an email or a Tweet or whatever the kids are doing these days.
 Check the links in the sidebar for details.
 
 ## Quick facts
