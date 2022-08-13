@@ -26,5 +26,11 @@ jobs:
           ruby-version: 2.7
           bundler-cache: true
 
+      - name: setup git config
+        run: |
+          # setup git
+          git config user.name "GitHub Actions Bot"
+          git config user.email "<>"
+
       - name: Deploy
         run: bash tools/deploy.sh
