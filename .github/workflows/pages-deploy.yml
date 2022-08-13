@@ -35,9 +35,6 @@ jobs:
         id: pages
         uses: actions/configure-pages@v1
 
-      - run: |
-          echo "Base path: ${{ steps.pages.outputs.base_path }}"
-
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
@@ -53,7 +50,7 @@ jobs:
       #   run: bash tools/deploy.sh
 
       - name: Build site
-        run: bundle exec jekyll build --config "${CONFIG_YML}" --destination "${SITE_DIR}" --baseurl ${{ steps.pages.outputs.base_path }}
+        run: bundle exec jekyll build --config "${CONFIG_YML}" --destination "${SITE_DIR}"
 
       - name: Test site
         run: bundle exec htmlproofer --disable-external --allow_hash_href "${SITE_DIR}"
