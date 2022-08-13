@@ -35,6 +35,9 @@ jobs:
         id: pages
         uses: actions/configure-pages@v1
 
+      - run: |
+          echo "Base path: ${{ steps.pages.outputs.base_path }}"
+
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
