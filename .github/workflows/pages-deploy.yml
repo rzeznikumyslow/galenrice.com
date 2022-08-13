@@ -12,6 +12,11 @@ on:
       - README.md
       - LICENSE
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -27,12 +32,12 @@ jobs:
           submodules: true
 
       - name: Setup Pages
+        id: pages
         uses: actions/configure-pages@v1
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.1
           bundler-cache: true
 
       # - name: setup git config
@@ -45,7 +50,7 @@ jobs:
       #   run: bash tools/deploy.sh
 
       - name: Build site
-        run: bundle exec jekyll build --config "${CONFIG_YML}" --destination "${SITE_DIR}"
+        run: bundle exec jekyll build --config "${CONFIG_YML}" --destination "${SITE_DIR}" --baseurl ${{ steps.pages.outputs.base_path }}
 
       - name: Test site
         run: bundle exec htmlproofer --disable-external --allow_hash_href "${SITE_DIR}"
