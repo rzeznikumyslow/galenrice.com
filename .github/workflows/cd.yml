@@ -19,6 +19,7 @@ permissions:
 
 jobs:
   build:
+    name: "Build & upload site artifact"
     runs-on: ubuntu-latest
     env:
       SITE_DIR: "_site"
@@ -50,6 +51,7 @@ jobs:
         uses: actions/upload-pages-artifact@v1
 
   deploy:
+    name: "Deploy site"
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -60,14 +62,15 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v1
 
-  purge:
+  purge-cache:
+    name: "Purge Cloudflare cache"
     needs:
       - deploy
     runs-on: ubuntu-latest
     steps:
       # Put steps here to build your site, deploy it to a service, etc.
 
-      - name: Purge Cloudflare Cache
+      - name: Purge Cloudflare cache
         uses: jakejarvis/cloudflare-purge-action@v0.3.0
 
         env:
